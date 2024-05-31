@@ -1,0 +1,274 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --clr-dark: #303030;
+    --main-clr: #FF0000;
+    --clr-ligth: #fff;
+    --font-main: 'Open Sans', Arial, sans-serif;
+    --font-size-base: 1em;
+    --font-size-med: 2em;
+    --font-size-large: 4em;
+    --line-height-base: 1.6;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: var(--line-height-base);
+    color: var(--clr-dark);
+    background: var(--main-clr);
+}
+
+.about-text h2, .contact-form h2, .contact-info h2 {
+    font-size: var(--font-size-large);
+    margin-bottom: 20px;
+}
+
+.about-image, .about-text, .contact-form, .contact-info {
+    max-width: 800px;
+    margin-bottom: 20px;
+}
+
+
+header {
+    padding: 20px 0;
+    background-color: var(--main-clr);
+}
+
+/* section {
+    padding: 10em 10em;
+} */
+
+/* .intro, .about, .projects, .contact {
+    padding: 50px 20px;
+} */
+
+/* Header section */
+
+.logo img{
+    max-width: 150px;
+    height: auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--main-clr);
+    padding: 10px 20px;
+    color: var(--clr-dark);
+}
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 5em;
+}
+
+.nav-links a {
+    color: var(--clr-dark);
+    text-decoration: none;
+    font-size:  var(--font-size-base);
+}
+
+hr {
+    color: var(--clr-dark);
+    font-size: 5px;
+}
+
+
+.menu-toggle {
+    display: none;
+}
+
+
+
+/* Introduction section */
+.intro {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--main-clr);
+    align-items: center;
+    text-align: center;
+    padding: 60px 40px;
+}
+
+.intro-text {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.intro-text h1 {
+    font-size: var(--font-size-large);
+    margin-bottom: 20px;
+}
+
+.intro-text p {
+    font-size: var(--font-size-base);
+    margin-bottom: 20px;
+}
+
+.intro-image{
+    flex: 1;
+}
+
+.intro-image img {
+    max-width: 25em;
+    border-radius: 35%;
+}
+
+.tech-logos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tech-logos i {
+    font-size: 24px;
+}
+
+
+/* About Me */
+.education {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+}
+
+.school {
+    background:var(--main-clr);
+    padding: 10px;
+    border-radius: 10px;
+    border: 5px solid var(--clr-dark)
+}
+
+/* project section */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.projects-card {
+    background: var(--main-clr);
+    padding: 20px;
+    border-radius: 10px;
+    border: 5px solid var(--clr-dark)
+}
+
+.projects-card a {
+    display: block;
+    margin: 5px 0;
+    color: var(--clr-dark);
+    text-decoration: none;
+}
+
+.download-resume {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: var(--clr-dark);
+    color: var(--main-clr);
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: var(--font-size-base);
+    text-align: center;
+}
+
+.download-resume:hover {
+    color: var(--clr-ligth);
+}
+
+/* contacts section */
+.contact-form form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid var(--clr-dark);
+    border-radius: 5px;
+}
+
+.contact-form button {
+    padding: 10px;
+    margin-top: 10px;
+    background: var(--clr-dark);
+    color: var(--main-clr);
+    border: none;
+    cursor: pointer;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.social-icons a {
+    font-size: 24px;
+    color: var(--clr-dark);
+}
+
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: var(--clr-dark);
+    }
+
+    .nav-links a {
+        padding: 10px;
+    }
+
+    .intro {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .intro-text {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .intro-image img {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .about, .contact {
+        padding: 40px 20px;
+    }
+
+    .intro-text, .about-image, .about-text, .contact-form, .contact-info {
+        max-width: 100%;
+    }
+
+    .education {
+        flex-direction: column;
+    }
+}
+
