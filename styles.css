@@ -40,7 +40,7 @@ body {
 
 
 header {
-    padding: 20px 0;
+    padding: 0px 10px;
     background-color: var(--main-clr);
 }
 
@@ -48,7 +48,7 @@ header {
 /* Header section */
 
 .logo img{
-    max-width: 150px;
+    max-width: 120px;
     height: auto;
 }
 
@@ -57,7 +57,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     background-color: var(--main-clr);
-    padding: 10px 20px;
+    padding: 0px 20px;
     color: var(--clr-dark);
     margin-right: 10px;
 }
@@ -75,9 +75,10 @@ nav {
     font-size:  var(--font-size-base);
 }
 
+
 hr {
     border: 3px solid var(--clr-dark);
-    margin: 20px 0;
+    margin: 0;
 }
 
 
@@ -101,6 +102,7 @@ hr {
 .intro-text {
     flex: 1;
     margin-right: 20px;
+    align-items: center;
 }
 
 .intro-text h1 {
@@ -109,7 +111,7 @@ hr {
 }
 
 .intro-text p {
-    font-size: var(--font-size-base);
+    font-size: var(--font-size-med);
     margin-bottom: 20px;
 }
 
@@ -125,12 +127,18 @@ hr {
 .tech-logos {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     gap: 20px;
 }
 
+.tech-logos p {
+    margin-right: 10px;
+    align-self: center;
+}
+
 .tech-logos i {
-    font-size: var(--font-size-base);
+    font-size: var(--font-size-med);
 }
 
 
@@ -195,8 +203,8 @@ hr {
 
 .project-card {
     background: var(--main-clr);
-    padding: 20px;
-    border-radius: 10px;
+    padding: 30px;
+    border-radius: 50px;
     border: 5px solid var(--clr-dark);
     flex: 1 1 calc(50% - 40px);
     box-sizing: border-box;
@@ -221,7 +229,7 @@ hr {
 }
 
 .project-card p {
-    font-size: var(--font-size-med);
+    font-size: var(--font-size-base);
     margin-bottom: 20px;
 }
 
@@ -256,14 +264,41 @@ hr {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
-    gap: 20px;
+    align-items: flex-start;
+    gap: 40px;
+    position: relative;
+}
+
+.contact-container::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: var(--clr-dark);
+    transform: translateX(-50%);
+}
+
+.contact-form, .contact-info {
+    flex: 1;
+    padding: 0 20px; /* Add padding to provide some space around the content */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align the h2 elements */
+    text-align: center;
+}
+
+.contact-form h2, .contact-info h2 {
+    text-align: center;
 }
 
 .contact-form form{
     display: flex;
     flex-direction: column;
     gap: 10px;
+    width: 80%;
+    max-width: 400px;
 }
 
 .contact-form input, .contact-form textarea {
@@ -271,6 +306,7 @@ hr {
     margin-top: 5px;
     border: 1px solid var(--clr-dark);
     border-radius: 5px;
+    width: 100%;
 }
 
 .contact-form button {
@@ -280,17 +316,24 @@ hr {
     color: var(--main-clr);
     border: none;
     cursor: pointer;
+    border-radius: 15px;
+    width: 100%;
 }
 
 .social-icons {
     display: flex;
-    gap: 10px;
+    gap: 20px;
     justify-content: center;
 }
 
 .social-icons a {
-    font-size: var(--font-size-med);
+    font-size: var(--font-size-large);
     color: var(--clr-dark);
+}
+
+.social-icons a:hover {
+    font-size: 4.25em;
+    color: var(--clr-ligth);
 }
 
 
@@ -330,6 +373,10 @@ hr {
 
     .about-container, .contact-container {
         flex-direction: column;
+    }
+
+    .contact-container::before {
+        display: none;
     }
 
     .intro-text, .about-image, .about-text, .contact-form, .contact-info {
