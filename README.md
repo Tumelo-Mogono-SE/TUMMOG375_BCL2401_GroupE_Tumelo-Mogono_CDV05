@@ -50,3 +50,7 @@ Your portfolio will be evaluated based on the following criteria:
 - **Ask for feedback**: Show your site to peers or mentors and make improvements based on their suggestions.
 
 By following this brief and focusing on each criterion, you will be able to create a simple developer portfolio that effectively showcases your skills and projects. Good luck!
+
+# Link to portfolio site:
+
+Link: https://tumelo-mogono-portfolio.netlify.app/
