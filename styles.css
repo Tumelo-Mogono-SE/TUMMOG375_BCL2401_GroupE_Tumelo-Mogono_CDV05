@@ -25,7 +25,7 @@ body {
     padding: 0;
     line-height: var(--line-height-base);
     color: var(--clr-dark);
-    background: var(--main-clr);
+    background: var(--clr-ligth);
 }
 
 .about-text h2, .contact-form h2, .contact-info h2 {
@@ -56,9 +56,10 @@ header {
 
 nav {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 0 0;
 }
 
 
@@ -72,6 +73,7 @@ nav {
     color: var(--clr-dark);
     text-decoration: none;
     font-size:  var(--font-size-base);
+    font-weight: bold;
     padding: 10px;
     transition: color 0.3s;
 }
@@ -87,9 +89,11 @@ nav {
     padding: 5px 10px;
 }
 
-hr {
+nav hr {
     border: 3px solid var(--clr-dark);
     margin: 0;
+    width: 100%;
+    order: 999;
 }
 
 .menu-toggle {
@@ -107,7 +111,7 @@ hr {
     position: relative;
     display: flex;
     flex-direction: row;
-    background-color: var(--main-clr);
+    background-color: var(--clr-ligth);
     align-items: center;
     text-align: center;
     padding: 60px 40px;
@@ -154,6 +158,14 @@ hr {
 .tech-logos i {
     font-size: var(--font-size-med);
 }
+
+.tech-logos i:hover {
+    font-size: var(--font-size-large);
+    /* color: var(--main-clr); */
+    text-shadow: -5px -5px 10px var(--main-clr);
+    
+}
+
 
 
 /* About Me */
@@ -346,7 +358,7 @@ hr {
 
 .social-icons a:hover {
     font-size: 4.25em;
-    color: var(--clr-ligth);
+    color: var(--main-clr);
 }
 
 footer {
@@ -382,7 +394,7 @@ footer p {
         top: 100%; 
         left: 0;
         width: 100%;
-        background-color: var(--clr-dark);
+        background-color: var(--main-clr);
         display: none;
         z-index: 999;
         border-bottom-left-radius: 15px;
@@ -407,7 +419,7 @@ footer p {
     .nav-links-mobile a {
         display: block;
         padding: 15px;
-        color: var(--main-clr);
+        color: var(--clr-dark);
         text-decoration: none;
     }
     
@@ -420,10 +432,12 @@ footer p {
     /* Slide down animation */
 @keyframes slideDown {
     0% {
-        transform: translateY(-100%);
+        transform: translateY(-20%);
+        opacity: 0;
     }
     100% {
         transform: translateY(0);
+        opacity: 1;
     }
 }
 
